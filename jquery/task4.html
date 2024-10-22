@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+<body>
+    <div>
+        <div>
+            <img class="fimg" src="../jquery/image/img-1.jpg" alt="" height="300px" width="200px">
+            <img class="fimg"src="../jquery/image/img-2.jpg" alt="" height="300px" width="200px">
+            <img class="fimg" src="../jquery/image/img-3.png" alt="" height="300px" width="200px">
+        </div>
+        <div>
+            <button id="show">Show</button>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('.fimg').click(function(){
+        $(this).fadeOut('slow');
+    });
+    $('#show').click(function(){
+        $('.fimg').fadeIn('slow')
+    })
+    
+</script>
+</html>

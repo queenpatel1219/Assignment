@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
+    <title>Jquery</title>
+    <style>
+        .show{
+            position: absolute;
+            left: 150px;
+            top: 52px;
+            /* bottom: 10px; */
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p>Show and Hide Password</p>
+        </div>
+        <div>
+            <input type="password" id="password">
+            <i class="ri-eye-line show" id="btn"></i>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+<script>
+    $('#btn').click(()=>{
+        var passwordf= $('#password');
+        var passwordfild= passwordf.attr('type');
+        
+
+        if(passwordfild === 'password'){
+            passwordf.attr('type','text');
+            $(this).text('show');
+            
+            
+        }
+        else{
+            passwordf.attr('type','password');
+            $(this).text('hide');
+        }
+    })
+</script>
+</html>
